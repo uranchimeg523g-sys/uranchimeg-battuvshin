@@ -1,0 +1,7 @@
+{
+  "name": "Сургуулийн 50 жилийн ойн PVC урилга (19x9 см)",
+  "description": "Сургуулийн 50 жилийн ойд зориулсан урд болон ар талдаа зурагтай, хэвлэхэд бэлэн 19x9 см хэмжээтэй PVC урилга бүтээгч ба загварчлал.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

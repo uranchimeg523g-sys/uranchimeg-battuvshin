@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-royal {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Gold foil and PVC shimmer utilities */
+.gold-text-shimmer {
+  background: linear-gradient(135deg, #d4af37 0%, #fff4cc 35%, #aa771c 70%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #fce881, #d4af37, #996515, #f3e5ab, #d4af37) 1;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #d4af37 0%, #f6e27a 30%, #cb9b28 60%, #e8c85c 100%);
+}
+
+.silver-gradient-bg {
+  background: linear-gradient(135deg, #cbd5e1 0%, #f8fafc 40%, #94a3b8 70%, #e2e8f0 100%);
+}
+
+/* Print specific styles for exact 19x9 cm or 9x19 cm PVC card */
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body[data-orientation="horizontal"] {
+    @page {
+      size: 190mm 90mm landscape;
+      margin: 0;
+    }
+  }
+
+  body[data-orientation="vertical"] {
+    @page {
+      size: 90mm 190mm portrait;
+      margin: 0;
+    }
+  }
+  
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page {
+    page-break-after: always;
+    break-after: page;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    position: relative;
+    margin: 0 !important;
+  }
+
+  .print-page.horizontal {
+    width: 190mm !important;
+    height: 90mm !important;
+  }
+
+  .print-page.vertical {
+    width: 90mm !important;
+    height: 190mm !important;
+  }
+
+  .print-page:last-child {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}
+
